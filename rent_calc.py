@@ -59,9 +59,16 @@ class Calculator:
 
     def fetch_data(self):
         rented_books_data = []
-        rented_books_data.append(("regular", int(self.num_regbooksrented.get()), int(self.regbook_rentduration.get())))
-        rented_books_data.append(("fiction", int(self.num_ficbooksrented.get()), int(self.ficbook_rentduration.get())))
-        rented_books_data.append(("novels", int(self.num_novbooksrented.get()), int(self.novbook_rentduration.get())))
+        try:
+            rented_books_data.append(
+                ("regular", int(self.num_regbooksrented.get()), int(self.regbook_rentduration.get())))
+            rented_books_data.append(
+                ("fiction", int(self.num_ficbooksrented.get()), int(self.ficbook_rentduration.get())))
+            rented_books_data.append(
+                ("novels", int(self.num_novbooksrented.get()), int(self.novbook_rentduration.get())))
+        except:
+            print("Please enter Valid data")
+
         # print(rented_books_data)
         return rented_books_data
 
