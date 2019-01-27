@@ -5,8 +5,9 @@ final HOST_PROVISION = params.HOST_PROVISION
 
 stage('Deploy') {
     node {
-        
-            // install galaxy roles
+        i
+           git branch: 'integration', url: 'https://github.com/dheerendramehar/book-rent-management-system.git'
+	   // install galaxy roles
             sh "ansible-galaxy install -vvv -r provision/requirements.yml"        
 
             ansiblePlaybook colorized: true, 
