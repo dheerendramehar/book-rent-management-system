@@ -2,7 +2,7 @@
 
 - name: Rent-management-system app container build and deployment
   hosts: all
-  task:
+  tasks:
   
     - name: Take checkout from Github and copy the source code to remote server
       git:
