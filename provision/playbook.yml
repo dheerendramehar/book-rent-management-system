@@ -10,7 +10,7 @@
         dest: /home/dheerendra/
     
     - name: Build the ubuntu container for app
-      docker_images: 
+      docker_image: 
         path: /home/dheerendra/book-rent-management-system
         name: calc_image
     
