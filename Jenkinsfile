@@ -13,7 +13,7 @@ stage('Deploy') {
            // limit: "${HOST_PROVISION}",
             installation: 'ansible',
             inventory: 'provision/inventory.ini', 
-            playbook: 'provision/playbook.yml', 
+            playbook: 'provision/playbook.yml' 
            // become: true,
            // becomeUser: 'dheerendra'
 
