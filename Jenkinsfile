@@ -14,8 +14,8 @@ stage('Deploy') {
             installation: 'ansible',
             inventory: 'provision/inventory.ini', 
             playbook: 'provision/playbook.yml', 
-            become: true,
-            becomeUser: 'dheerendra'
+           // become: true,
+           // becomeUser: 'dheerendra'
 
             //credentialsId: 'ssh-jenkins',
         
