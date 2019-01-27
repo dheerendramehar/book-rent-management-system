@@ -7,7 +7,7 @@
     - name: Take checkout from Github and copy the source code to remote server
       git:
         repo: https://github.com/dheerendramehar/book-rent-management-system.git
-        dest: /home/dheerendra/
+        dest: /home/dheerendra/book-rent-management-system
     
     - name: Build the ubuntu container for app
       docker_image: 
