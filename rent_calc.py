@@ -18,7 +18,7 @@ class Calculator:
         Label(root, text="Rent duration").grid(row=0, column=2, sticky=W, padx=4)
 
         # fields for regular book
-        Label(root, text="Regular").grid(row=1, sticky=W, padx=4)
+        Label(root, text="Regular:").grid(row=1, sticky=W, padx=4)
         # num_regbooksrented = Entry(root).grid(row=1, column=1, sticky=E, pady=4) # this doesn't work
         self.num_regbooksrented = Entry(root)
         self.num_regbooksrented.insert(0, "0")
@@ -28,7 +28,7 @@ class Calculator:
         self.regbook_rentduration.grid(row=1, column=2, sticky=E, pady=4)
 
         # fields for fiction book
-        Label(root, text="Fiction").grid(row=2, sticky=W, padx=4)
+        Label(root, text="Fiction:").grid(row=2, sticky=W, padx=4)
         self.num_ficbooksrented = Entry(root)
         self.num_ficbooksrented.insert(0, "0")
         self.num_ficbooksrented.grid(row=2, column=1, sticky=E, pady=4)
@@ -37,7 +37,7 @@ class Calculator:
         self.ficbook_rentduration.grid(row=2, column=2, sticky=E, pady=4)
 
         # fields for novels book
-        Label(root, text="Novels").grid(row=3, sticky=W, padx=4)
+        Label(root, text="Novels:").grid(row=3, sticky=W, padx=4)
         self.num_novbooksrented = Entry(root)
         self.num_novbooksrented.insert(0, "0")
         self.num_novbooksrented.grid(row=3, column=1, sticky=E, pady=4)
@@ -52,9 +52,9 @@ class Calculator:
 
         # fields for submit, quit and clear buttons
         self.submit_button = Button(root, text="Submit", command=(lambda: self.rent_calc())) \
-            .grid(row=5, column=1, sticky=E, pady=4, padx=0)
+            .grid(row=5, column=1, sticky=E, pady=10, padx=0)
 
-        self.quit_button = Button(root, text="Quit", command=root.quit).grid(row=5, column=3, pady=4)
+        self.quit_button = Button(root, text="Quit", command=root.quit).grid(row=5, column=2, pady=10)
         # clear_button = Button(root, text="Clear").grid(row=5, column=2, pady=4,padx=0)
 
     def fetch_data(self):
