@@ -1,7 +1,7 @@
 #!groovy​
 
 // HOST_PROVISION -> server to run ansible based on provision/inventory.ini
-final HOST_PROVISION = params.HOST_PROVISION
+//final HOST_PROVISION = params.HOST_PROVISION
 
 stage('Deploy') {
     node {
@@ -10,7 +10,7 @@ stage('Deploy') {
            // sh "ansible-galaxy install -vvv -r provision/requirements.yml"        
 
             ansiblePlaybook colorized: true, 
-            limit: "${HOST_PROVISION}",
+           // limit: "${HOST_PROVISION}",
             installation: 'ansible',
             inventory: 'provision/inventory.ini', 
             playbook: 'provision/playbook.yml', 
