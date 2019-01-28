@@ -8,6 +8,7 @@
       git:
         repo: https://github.com/dheerendramehar/book-rent-management-system.git
         dest: /home/dheerendra/book-rent-management-system
+        version: integration
     
     - name: Build the ubuntu container for app
       docker_image: 
